@@ -1,0 +1,14 @@
+Create an project
+
+C-Create employee 
+R-get all the employees
+U-Update the employee data
+D-Delete the employee
+
+employee
+id
+first name
+last name
+gender
+doj-date of joining
+dob-date of birth
