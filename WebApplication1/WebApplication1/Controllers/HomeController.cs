@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Models;
+using WebApplication1.ViewModel;
 
 namespace WebApplication1.Controllers
 {
@@ -16,14 +17,34 @@ namespace WebApplication1.Controllers
         //[Route("show1")]
 
         SampleDBContext db = new SampleDBContext();
+        [HttpGet]
         public IEnumerable<Sample> getData()
         {
             return db.Samples;
         }
-
-        public string show2()
+        [HttpPost]
+        public IActionResult postData(SampleViewModel sampleViewModel)
         {
-            return "show 2 is getting called";
+            Sample sample = new Sample();
+            sample.Text = sampleViewModel.Text;
+            db.Samples.Add(sample);
+            db.SaveChanges();
+
+            return Ok("Record Added Successfully");
+        }
+
+        [HttpPut]
+        public IActionResult putData(SampleViewModel sampleViewModel)
+        {
+            if (db.Samples.Any(x => x.Id == sampleViewModel.Id)){
+                var data = db.Samples.Where(x => x.Id == sampleViewModel.Id).FirstOrDefault();
+                data.Text = sampleViewModel.Text;
+                db.Samples.Update(data);
+                db.SaveChanges(); 
+                return Ok("Record have been successfully updated.");
+            }
+
+            return BadRequest("Record not found.");
         }
     }
 }
