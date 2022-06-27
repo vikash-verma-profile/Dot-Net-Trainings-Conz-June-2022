@@ -46,5 +46,19 @@ namespace WebApplication1.Controllers
 
             return BadRequest("Record not found.");
         }
+
+        [HttpDelete]
+        public IActionResult deleteData(int Id)
+        {
+            if (db.Samples.Any(x => x.Id == Id))
+            {
+                var data = db.Samples.Where(x => x.Id == Id).FirstOrDefault();
+                db.Samples.Remove(data);
+                db.SaveChanges();
+                return Ok("Record have been successfully deleted.");
+            }
+
+            return BadRequest("Record not found.");
+        }
     }
 }
