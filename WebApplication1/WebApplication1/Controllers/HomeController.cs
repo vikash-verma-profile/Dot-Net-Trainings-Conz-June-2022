@@ -4,18 +4,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class HomeController : ControllerBase
     {
-        [HttpGet]
-        [Route("show1")]
-        public string show()
+        //[HttpGet]
+        //[Route("show1")]
+
+        SampleDBContext db = new SampleDBContext();
+        public IEnumerable<Sample> getData()
         {
-            return "show is getting called";
+            return db.Samples;
         }
 
         public string show2()
