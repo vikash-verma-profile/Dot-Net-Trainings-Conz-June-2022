@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "vRUXHgP273EOk792/7ZA8hgQo6wo9Qw9xeZRd6SxKEsxMh1/X/Pgd/gAr6sAQboO4SlwtknRfRcpntfXrmTUsw==",
+  "dgSpecHash": "nuOlniE1OEMtSlQJhiu7Tzqe4ksnxzQw3L1LYrqN1blEtpP579PQnDsG5acVTWZChWGUAOi4zQQ83+GSOAW9Cg==",
   "success": true,
   "projectFilePath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\Dot-Net-Trainings-Conz-June-2022\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.26\\microsoft.aspnetcore.authentication.jwtbearer.3.1.26.nupkg.sha512",
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

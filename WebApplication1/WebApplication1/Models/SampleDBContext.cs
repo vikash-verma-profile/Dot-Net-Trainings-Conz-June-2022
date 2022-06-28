@@ -18,6 +18,7 @@ namespace WebApplication1.Models
         }
 
         public virtual DbSet<Sample> Samples { get; set; }
+        public virtual DbSet<TblLogin> TblLogins { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -36,7 +37,18 @@ namespace WebApplication1.Models
             {
                 entity.ToTable("Sample");
 
+                entity.Property(e => e.CreatedOn).HasColumnType("date");
+
                 entity.Property(e => e.Text).HasMaxLength(200);
+            });
+
+            modelBuilder.Entity<TblLogin>(entity =>
+            {
+                entity.ToTable("tblLogin");
+
+                entity.Property(e => e.Password).HasMaxLength(100);
+
+                entity.Property(e => e.UserName).HasMaxLength(100);
             });
 
             OnModelCreatingPartial(modelBuilder);

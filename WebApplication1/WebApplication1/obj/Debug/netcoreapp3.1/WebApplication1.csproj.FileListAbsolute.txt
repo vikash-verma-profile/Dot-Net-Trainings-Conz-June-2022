@@ -67,3 +67,4 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\WebApplic
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\WebApplication1\WebApplication1\obj\Debug\netcoreapp3.1\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\WebApplication1\WebApplication1\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

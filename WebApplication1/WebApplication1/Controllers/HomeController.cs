@@ -16,7 +16,12 @@ namespace WebApplication1.Controllers
         //[HttpGet]
         //[Route("show1")]
 
-        SampleDBContext db = new SampleDBContext();
+        SampleDBContext db;
+
+        public HomeController(SampleDBContext _db)
+        {
+            db = _db;
+        }
         [HttpGet]
         public IEnumerable<Sample> getData()
         {

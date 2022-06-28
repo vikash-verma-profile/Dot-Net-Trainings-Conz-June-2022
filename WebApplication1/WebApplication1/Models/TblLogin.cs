@@ -5,10 +5,10 @@ using System.Collections.Generic;
 
 namespace WebApplication1.Models
 {
-    public partial class Sample
+    public partial class TblLogin
     {
         public int Id { get; set; }
-        public string Text { get; set; }
-        public DateTime? CreatedOn { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
     }
 }
