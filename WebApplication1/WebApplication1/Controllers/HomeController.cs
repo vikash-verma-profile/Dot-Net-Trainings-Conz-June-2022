@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using WebApplication1.ViewModel;
 
 namespace WebApplication1.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class HomeController : ControllerBase
     {
@@ -22,12 +23,14 @@ namespace WebApplication1.Controllers
         {
             db = _db;
         }
+        [Route("getData")]
         [HttpGet]
         public IEnumerable<Sample> getData()
         {
             return db.Samples;
         }
         [HttpPost]
+        [Authorize]
         public IActionResult postData(SampleViewModel sampleViewModel)
         {
             Sample sample = new Sample();
@@ -39,6 +42,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public IActionResult putData(SampleViewModel sampleViewModel)
         {
             if (db.Samples.Any(x => x.Id == sampleViewModel.Id)){
@@ -53,6 +57,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         public IActionResult deleteData(int Id)
         {
             if (db.Samples.Any(x => x.Id == Id))

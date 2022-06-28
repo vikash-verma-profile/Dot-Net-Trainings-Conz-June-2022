@@ -8,6 +8,6 @@ namespace WebApplication1.Interfaces
 {
     public interface IJWTMangerRepository
     {
-        Tokens Authenticate(LoginViewModel users);
+        Tokens Authenticate(LoginViewModel users,bool IsRegister);
     }
 }

@@ -10,7 +10,7 @@ using WebApplication1.ViewModel;
 
 namespace WebApplication1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class LoginController : ControllerBase
     {
@@ -25,7 +25,19 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult Login(LoginViewModel loginViewModel)
         {
-            var token = iJWTMangerRepository.Authenticate(loginViewModel);
+            var token = iJWTMangerRepository.Authenticate(loginViewModel,false);
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+            return Ok(token);
+        }
+
+
+        [HttpPost]
+        public IActionResult Register(LoginViewModel loginViewModel)
+        {
+            var token = iJWTMangerRepository.Authenticate(loginViewModel,true);
             if (token == null)
             {
                 return Unauthorized();

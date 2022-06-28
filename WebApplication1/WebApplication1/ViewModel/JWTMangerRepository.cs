@@ -25,8 +25,21 @@ namespace WebApplication1.ViewModel
             configuration = _configuration;
             db = _db;
         }
-        public Tokens Authenticate(LoginViewModel users)
+        public Tokens Authenticate(LoginViewModel users,bool IsRegister)
         {
+            if (IsRegister)
+            {
+                if (db.TblLogins.Any(x => x.UserName == users.UserName))
+                {
+                    return null;
+                }
+
+                TblLogin tbllogin = new TblLogin();
+                tbllogin.UserName = users.UserName;
+                tbllogin.Password = users.Password;
+                db.TblLogins.Add(tbllogin);
+                db.SaveChanges();
+            }
             userRecords = db.TblLogins.ToList().ToDictionary(x => x.UserName, x => x.Password);
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenkey = Encoding.UTF8.GetBytes(configuration["JWT:Key"]);
