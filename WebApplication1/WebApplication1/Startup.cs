@@ -35,8 +35,6 @@ namespace WebApplication1
             services.AddControllers();
             services.AddSwaggerGen();
             services.AddDbContext<SampleDBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("SampleDBConection")));
-            services.AddTransient<IJWTMangerRepository, JWTMangerRepository>();
-
             services.AddAuthentication(x=>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -55,6 +53,7 @@ namespace WebApplication1
                     IssuerSigningKey=new SymmetricSecurityKey(key)
                 };
             });
+            services.AddTransient<IJWTMangerRepository, JWTMangerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,14 +65,11 @@ namespace WebApplication1
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
             app.UseSwagger();
             app.UseSwaggerUI();
-
-            app.UseAuthorization();
             app.UseAuthentication();
-
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

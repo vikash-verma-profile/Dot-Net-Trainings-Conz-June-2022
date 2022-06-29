@@ -1,0 +1,5 @@
+AddScoped scoped objects within a request ,but different across differnet requests
+
+AddTransient a new instance is provided to every controller and every service
+
+AddSingleton create singleton objects for every object and every request

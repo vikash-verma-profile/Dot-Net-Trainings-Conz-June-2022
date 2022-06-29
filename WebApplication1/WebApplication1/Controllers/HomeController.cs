@@ -12,6 +12,7 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class HomeController : ControllerBase
     {
         //[HttpGet]
@@ -30,7 +31,6 @@ namespace WebApplication1.Controllers
             return db.Samples;
         }
         [HttpPost]
-        [Authorize]
         public IActionResult postData(SampleViewModel sampleViewModel)
         {
             Sample sample = new Sample();
@@ -42,7 +42,6 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPut]
-        [Authorize]
         public IActionResult putData(SampleViewModel sampleViewModel)
         {
             if (db.Samples.Any(x => x.Id == sampleViewModel.Id)){
@@ -57,7 +56,6 @@ namespace WebApplication1.Controllers
         }
 
         [HttpDelete]
-        [Authorize]
         public IActionResult deleteData(int Id)
         {
             if (db.Samples.Any(x => x.Id == Id))

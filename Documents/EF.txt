@@ -2,4 +2,10 @@ Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=SampleDB;Integra
 
 
 
-Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=SampleDB;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=CatalogDB;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force
+
+
+Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=ProductDB;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models 
+
+Scaffold-DbContext "Data Source=DESKTOP-PP0TB7N;Initial Catalog=CatalogDB;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models 
+
