@@ -3,3 +3,9 @@ AddScoped scoped objects within a request ,but different across differnet reques
 AddTransient a new instance is provided to every controller and every service
 
 AddSingleton create singleton objects for every object and every request
+
+OCelot
+-Open source api gateway for dot net platforms
+
+Upstream--user will hit
+Downstream--url of your microservice
