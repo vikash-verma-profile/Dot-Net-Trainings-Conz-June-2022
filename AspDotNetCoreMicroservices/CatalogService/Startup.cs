@@ -1,5 +1,6 @@
 using CatalogService.Models;
 using CatalogService.Services;
+using Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,7 @@ namespace CatalogService
             services.AddScoped<ICatalogService,CatalogServiceImpl>();
             services.AddSwaggerGen();
             services.AddDbContext<CatalogDBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("CatalogDBConnection")));
+            services.AddConsulConfig(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +43,7 @@ namespace CatalogService
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseConsul(Configuration);
             app.UseHttpsRedirection();
             app.UseSwagger();
             app.UseSwaggerUI();

@@ -67,3 +67,7 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNet
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\ProductService\obj\Debug\netcoreapp3.1\ProductService.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\ProductService\obj\Debug\netcoreapp3.1\ProductService.pdb
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\ProductService\obj\Debug\netcoreapp3.1\ProductService.genruntimeconfig.cache
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\ProductService\bin\Debug\netcoreapp3.1\Consul.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\ProductService\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\ProductService\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\ProductService\bin\Debug\netcoreapp3.1\Common.pdb

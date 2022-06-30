@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogService", "CatalogService\CatalogService.csproj", "{D92339DB-97FC-4071-BF5B-AF8495498CFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService", "CatalogService\CatalogService.csproj", "{D92339DB-97FC-4071-BF5B-AF8495498CFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{94271D9E-DF15-42A5-9407-1E6839917294}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService", "ProductService\ProductService.csproj", "{94271D9E-DF15-42A5-9407-1E6839917294}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{1F2890F2-AC9A-43B7-BAAB-5F669D1D37D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway", "APIGateway\APIGateway.csproj", "{1F2890F2-AC9A-43B7-BAAB-5F669D1D37D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{149FA694-13B2-43D9-B063-C6E1E864F008}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1F2890F2-AC9A-43B7-BAAB-5F669D1D37D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F2890F2-AC9A-43B7-BAAB-5F669D1D37D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F2890F2-AC9A-43B7-BAAB-5F669D1D37D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149FA694-13B2-43D9-B063-C6E1E864F008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149FA694-13B2-43D9-B063-C6E1E864F008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149FA694-13B2-43D9-B063-C6E1E864F008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149FA694-13B2-43D9-B063-C6E1E864F008}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,3 +1,4 @@
+using Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +33,7 @@ namespace ProductService
             services.AddScoped<IProductService, ProductServiceImpl>();
             services.AddSwaggerGen();
             services.AddDbContext<ProductDBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ProductDBConnection")));
+            services.AddConsulConfig(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +43,7 @@ namespace ProductService
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseConsul(Configuration);
             app.UseHttpsRedirection();
             app.UseSwagger();
             app.UseSwaggerUI();

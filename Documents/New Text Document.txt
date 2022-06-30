@@ -9,3 +9,8 @@ OCelot
 
 Upstream--user will hit
 Downstream--url of your microservice
+
+
+https://localhost:44378/swagger/index.html -product
+
+https://localhost:44358/swagger/index.html-catalog

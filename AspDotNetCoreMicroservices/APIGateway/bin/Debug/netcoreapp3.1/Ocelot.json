@@ -1,31 +1,28 @@
 {
   "Routes": [
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/catalog/findall",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 44358
-        }
-      ],
+      "ServiceName": "catalogService",
       "UpstreamPathTemplate": "/api/gatway/catalog/findall",
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
+      "UseServiceDiscovery": true,
       "DownstreamPathTemplate": "/api/product/findall",
+      "ServiceName": "productService",
       "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 44378
-        }
-      ],
       "UpstreamPathTemplate": "/api/gatway/product/findall",
       "UpstreamHttpMethod": [ "Get" ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:44327"
+    //"BaseUrl": "https://localhost:44327"
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": "8500",
+      "Type": "Consul"
+    }
   }
 }

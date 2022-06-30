@@ -360,4 +360,9 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNet
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\obj\Debug\netcoreapp3.1\APIGateway.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\obj\Debug\netcoreapp3.1\APIGateway.pdb
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\obj\Debug\netcoreapp3.1\APIGateway.genruntimeconfig.cache
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\bin\Debug\netcoreapp3.1\Ocelot_old.json
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\bin\Debug\netcoreapp3.1\Consul.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\bin\Debug\netcoreapp3.1\Ocelot.Provider.Consul.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Net.Http.WinHttpHandler.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Net.Http.WinHttpHandler.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\APIGateway\obj\Debug\netcoreapp3.1\APIGateway.csproj.AssemblyReference.cache

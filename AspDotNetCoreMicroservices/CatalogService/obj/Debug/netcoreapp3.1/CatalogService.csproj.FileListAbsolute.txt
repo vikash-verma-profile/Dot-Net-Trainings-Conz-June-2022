@@ -67,3 +67,7 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNet
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\CatalogService\obj\Debug\netcoreapp3.1\CatalogService.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\CatalogService\obj\Debug\netcoreapp3.1\CatalogService.pdb
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\CatalogService\obj\Debug\netcoreapp3.1\CatalogService.genruntimeconfig.cache
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\CatalogService\bin\Debug\netcoreapp3.1\Consul.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\CatalogService\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\CatalogService\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\AspDotNetCoreMicroservices\CatalogService\bin\Debug\netcoreapp3.1\Common.pdb
