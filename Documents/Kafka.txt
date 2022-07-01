@@ -1,0 +1,26 @@
+				Kafka vs 				RabbitMQ
+
+Message Ordering		Supports				Not Supported
+
+
+
+
+Zookeeper start
+
+.\zookeeper-server-start.bat C:\Kafka-bin\config\zookeeper.properties
+
+Kafka Start
+
+.\kafka-server-start.bat C:\Kafka-bin\config\server.properties
+
+Create Topic
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic temp-topic
+
+To List all topics
+kafka-topics --zookeeper localhost:2181 --list
+
+start producer
+kafka-console-producer.bat --broker-list localhost:9092 --topic temp-topic-cf
+
+start consumer
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic temp-topic-cf --from-beginning
