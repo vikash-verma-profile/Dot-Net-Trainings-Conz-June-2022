@@ -11,4 +11,11 @@ export class AppComponent {
   samplename="Vikash Verma";
 
   CustomerModel:Customer=new Customer();
+  CustomerModels:Array<Customer>=new Array<Customer>();
+
+  AddCustomer(){
+    this.CustomerModels.push(this.CustomerModel);
+    console.log(this.CustomerModels);
+    this.CustomerModel=new Customer();
+  }
 }
