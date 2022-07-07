@@ -1,0 +1,40 @@
+npm install @angular/cli -g 
+ng new first-sample-project
+cd first-sample-project
+ng serve
+
+
+javascript
+jquery
+typescript after compliation becomes javascript
+angular js
+angular
+
+.js==>for javascript file
+.ts=> for typescript
+
+
+Ngmodule
+component
+template
+decorator
+
+boostrap==> to kick start something
+export==> for import it's mendatory that same file should be exported
+
+[()]==> 2 way binding
+()==>one way or event binding
+[]==>property binding or one way binding
+
+ng generate component <component-name>
+ng g c <component-name>
+
+Root routes
+localhost/customer/
+
+child routes
+/add
+/add
+
+localhost/customer/add
+localhost/supplier/add
