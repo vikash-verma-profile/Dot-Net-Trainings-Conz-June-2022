@@ -3,11 +3,16 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { CustomerComponent } from './customer/customer.component';
+import { SupplierComponent } from './supplier/supplier.component';
+import { HomeComponent } from './home/home.component';
+import { MasterComponent } from './home/master.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    CustomerComponent,
+    SupplierComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -15,6 +20,6 @@ import { AppComponent } from './app.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [MasterComponent]
 })
 export class AppModule { }
