@@ -1,35 +1,49 @@
-<div>
-    <h2>Add Customer</h2>
-    <div style="padding:5px">
-        <label style="padding:5px">Customer Name</label>
-        <input [(ngModel)]="CustomerModel.customerName" type="text" />
+<div class="row">
+    <div class="col-xl-9">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2>Add Customer</h2>
+                <div>
+                    <label class="form-label">Customer Code</label>
+                    <input [(ngModel)]="CustomerModel.customerCode" class="form-control" type="text" />
+                </div>
+                <div>
+                    <label class="form-label">Customer Name</label>
+                    <input [(ngModel)]="CustomerModel.customerName" class="form-control" type="text" />
+                </div>
+                <div>
+                    <label class="form-label">Customer Amount</label>
+                    <input [(ngModel)]="CustomerModel.customerAmount" class="form-control" type="text" />
+                </div>
+                <div class="py-4">
+                    <input type="submit" class="btn btn-primary" value="Add Customer" (click)="AddCustomer()" />
+                </div>
+            </div>
+        </div>
     </div>
-    <div style="padding:5px">
-        <label style="padding:5px">Customer Code</label>
-        <input [(ngModel)]="CustomerModel.customerCode" type="text" />
-    </div>
-    <div style="padding:5px"><label style="padding:5px">Customer Amount</label>
-        <input [(ngModel)]="CustomerModel.customerAmount" type="text" />
-    </div>
-    <div style="padding:5px"> <input type="submit" value="Add Customer" (click)="AddCustomer()" /></div>
-
 </div>
-<!-- 
-{{CustomerModel.customerName}}
-{{CustomerModel.customerAmount}}
-{{CustomerModel.customerCode}} -->
-<h3>Customer List</h3>
-<table border="1">
-    <tr>
+
+<table class="table caption-top">
+    <caption>List of Customers</caption>
+    <thead class="table-light">
+
         <td>Customer Code</td>
         <td>Customer Name</td>
         <td>Customer Amount</td>
         <td>Actions</td>
-    </tr>
+    </thead>
     <tr *ngFor="let cust of CustomerModels">
         <td>{{cust.customerCode}}</td>
         <td>{{cust.customerName}}</td>
         <td>{{cust.customerAmount}}</td>
-        <td><input type="button" value="Edit" (click)="EditCustomer(cust)" /><input type="button" value="Delete" (click)="DeleteCustomer(cust)" /></td>
+        <td>
+            <button type="button" (click)="EditCustomer(cust)" class="btn btn-outline-primary" style="margin:10px">Edit</button>
+            <button type="button" (click)="DeleteCustomer(cust)" class="btn btn-outline-primary" >Delete</button>
+        </td>
     </tr>
 </table>
+
+<!-- 
+{{CustomerModel.customerName}}
+{{CustomerModel.customerAmount}}
+{{CustomerModel.customerCode}} -->
