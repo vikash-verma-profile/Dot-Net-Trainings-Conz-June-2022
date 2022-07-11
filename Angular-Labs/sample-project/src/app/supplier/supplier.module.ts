@@ -13,7 +13,6 @@ import { SupplierComponent } from './supplier.component';
     ],
     imports: [
         CommonModule,
-        BrowserModule,
         FormsModule,
         RouterModule.forChild(Supplierroutes)
     ],
