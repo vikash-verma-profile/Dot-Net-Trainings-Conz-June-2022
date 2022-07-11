@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xl-9">
+        <div class="card border-0">
+            <div class="card-body">
+                <h2>Login</h2>
+                <div>
+                    <label class="form-label">UserName</label>
+                    <input [(ngModel)]="loginModel.userName" class="form-control" type="text" />
+                </div>
+                <div>
+                    <label class="form-label">Password</label>
+                    <input [(ngModel)]="loginModel.password" class="form-control" type="text" />
+                </div>
+                <div class="py-4">
+                    <input type="submit" class="btn btn-primary" value="Login" (click)="Login()" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

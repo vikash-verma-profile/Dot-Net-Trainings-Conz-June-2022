@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
+import { LoginComponent } from '../login/login.component';
+import { RegisterComponent } from '../register/register.component';
 import { Mainroutes } from '../routing/mainroutes';
 import { MasterComponent } from './master.component';
 
@@ -11,7 +13,9 @@ import { MasterComponent } from './master.component';
 @NgModule({
   declarations: [
     HomeComponent,
-    MasterComponent
+    MasterComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
