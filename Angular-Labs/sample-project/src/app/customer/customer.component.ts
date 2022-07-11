@@ -11,6 +11,15 @@ export class CustomerComponent {
    
 
   }
+  ngOnInit(): void {
+    this.http.get("https://localhost:44318/api/Customer").subscribe(res=>this.GetFromServer(res),res=>console.log(res));
+  }
+
+  GetFromServer(res:any){
+    console.log(res);
+    this.CustomerModels=res;
+  }
+
   title = 'sample-project';
   samplename = "Vikash Verma";
 
