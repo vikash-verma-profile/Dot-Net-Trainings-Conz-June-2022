@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Customer } from './customer.model';
 
@@ -7,17 +7,20 @@ import { Customer } from './customer.model';
 })
 export class CustomerComponent {
 
-  constructor(private http:HttpClient) {
-   
+  constructor(private http: HttpClient) {
+
 
   }
   ngOnInit(): void {
-    this.http.get("https://localhost:44318/api/Customer").subscribe(res=>this.GetFromServer(res),res=>console.log(res));
+    this.GetCustomerData();
   }
 
-  GetFromServer(res:any){
+  GetCustomerData() {
+    this.http.get("https://localhost:44318/api/Customer").subscribe(res => this.GetFromServer(res), res => console.log(res));
+  }
+  GetFromServer(res: any) {
     console.log(res);
-    this.CustomerModels=res;
+    this.CustomerModels = res;
   }
 
   title = 'sample-project';
@@ -34,14 +37,14 @@ export class CustomerComponent {
     // }
     // this.CustomerModels.push(this.CustomerModel);
     // console.log(this.CustomerModels);
-    var customerdto={
-      customerCode:this.CustomerModel.customerCode,
-      customerAmount:Number(this.CustomerModel.customerAmount),
-      customerName:this.CustomerModel.customerName
+    var customerdto = {
+      customerCode: this.CustomerModel.customerCode,
+      customerAmount: Number(this.CustomerModel.customerAmount),
+      customerName: this.CustomerModel.customerName
     }
     console.log(customerdto);
     console.log(this.CustomerModel);
-    this.http.post("https://localhost:44318/api/Customer",customerdto).subscribe(res=>console.log(res),res=>console.log(res));
+    this.http.post("https://localhost:44318/api/Customer", customerdto).subscribe(res => { this.GetCustomerData(); console.log(res) }, res => console.log(res));
     this.CustomerModel = new Customer();
   }
 
@@ -49,12 +52,17 @@ export class CustomerComponent {
     this.CustomerModel = cust;
   }
   DeleteCustomer(cust: Customer) {
-    this.CustomerModels=this.arrayRemove( this.CustomerModels,Customer)
+    console.log(cust);
+    let httparms = new HttpParams().set("Id", cust.id);
+    let options = { params: httparms };
+    // this.CustomerModels=this.arrayRemove( this.CustomerModels,Customer)
+    this.http.delete("https://localhost:44318/api/Customer/delete", options).subscribe(res => { this.GetCustomerData(); console.log(res) }, res => console.log(res));
+
   }
 
-  arrayRemove(arr:any,value:any){
-    return arr.filter(function(sample:any){
-      return sample!=value;
+  arrayRemove(arr: any, value: any) {
+    return arr.filter(function (sample: any) {
+      return sample != value;
     });
   }
 }
