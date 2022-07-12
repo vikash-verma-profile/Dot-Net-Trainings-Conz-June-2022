@@ -13,9 +13,9 @@ namespace CustomerApi.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private readonly CustomerContext _context;
+        private readonly CustomerDBContext _context;
 
-        public CustomerController(CustomerContext context)
+        public CustomerController(CustomerDBContext context)
         {
             _context = context;
         }
@@ -41,7 +41,7 @@ namespace CustomerApi.Controllers
         [Route("delete")]
         public async Task<int> DeleteCustomer(int Id)
         {
-            var customer = _context.Customers.Where(x=>x.ID==Id).FirstOrDefault();
+            var customer = _context.Customers.Where(x=>x.Id==Id).FirstOrDefault();
             _context.Customers.Remove(customer);
             return await _context.SaveChangesAsync();
         }

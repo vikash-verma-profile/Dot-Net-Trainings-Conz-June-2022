@@ -1,4 +1,7 @@
+using CustomerApi.Interfaces;
 using CustomerApi.Model;
+using CustomerApi.ViewModel;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,10 +11,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace CustomerApi
@@ -29,7 +34,7 @@ namespace CustomerApi
         public void ConfigureServices(IServiceCollection services)
         {
             string connectionstring = Configuration.GetConnectionString("CustomerConnection");
-            services.AddDbContext<CustomerContext>(options => options.UseSqlServer(connectionstring));
+            services.AddDbContext<CustomerDBContext>(options => options.UseSqlServer(connectionstring));
             services.AddControllers();
 
             services.AddSwaggerGen(c =>
@@ -37,6 +42,25 @@ namespace CustomerApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CustomerApi", Version = "v1" });
                 c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(o => {
+                var key = Encoding.UTF8.GetBytes(Configuration["JWT:Key"]);
+                o.SaveToken = true;
+                o.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateAudience = false,
+                    ValidateIssuer = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration["JWT:Issuer"],
+                    ValidAudience = Configuration["JWT:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+            });
+            services.AddTransient<IJWTMangerRepository, JWTMangerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
