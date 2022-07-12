@@ -6,7 +6,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { Customerroutes } from '../routing/customerroutes';
 import { CustomerComponent } from './customer.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { TokenInterceptorService } from '../services/token-interceptor.service';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
         RouterModule.forChild(Customerroutes),
         HttpClientModule
     ],
-    providers: [],
+    providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }],
     bootstrap: [CustomerComponent]
 })
 export class CustomerModule { }

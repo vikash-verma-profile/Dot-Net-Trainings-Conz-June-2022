@@ -79,7 +79,7 @@ namespace CustomerApi
           .AllowAnyMethod()
           .AllowAnyHeader());
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
