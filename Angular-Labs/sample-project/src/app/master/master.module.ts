@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,6 +8,7 @@ import { HomeComponent } from '../home/home.component';
 import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
 import { Mainroutes } from '../routing/mainroutes';
+import { AuthService } from '../services/auth.service';
 import { MasterComponent } from './master.component';
 
 
@@ -20,9 +22,10 @@ import { MasterComponent } from './master.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(Mainroutes)
+    RouterModule.forRoot(Mainroutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [MasterComponent]
 })
 export class MasterModule { }

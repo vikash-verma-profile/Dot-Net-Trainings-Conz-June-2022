@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _auth: AuthService, private _router: Router) { }
 
   ngOnInit(): void {
   }
 
+  Logout(){
+    this._auth.logoutUser();
+    this._router.navigateByUrl('/home');
+  }
+
+  LogggedIn(Input:boolean):boolean{
+    if(Input){
+      return this._auth.loggedIn();
+    }
+    else{
+      return !this._auth.loggedIn();
+    }
+  }
 }
