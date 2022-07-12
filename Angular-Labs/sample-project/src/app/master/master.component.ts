@@ -15,7 +15,7 @@ export class MasterComponent implements OnInit {
 
   Logout(){
     this._auth.logoutUser();
-    this._router.navigateByUrl('/home');
+    this._router.navigate(['']);
   }
 
   LogggedIn(Input:boolean):boolean{
