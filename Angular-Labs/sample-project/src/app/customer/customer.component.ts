@@ -65,4 +65,8 @@ export class CustomerComponent {
       return sample != value;
     });
   }
+
+  hasError(typeofvalidator:string,controlname:string):Boolean{
+    return this.CustomerModel.formCustomerGroup.controls[controlname].hasError(typeofvalidator);
+  }
 }
