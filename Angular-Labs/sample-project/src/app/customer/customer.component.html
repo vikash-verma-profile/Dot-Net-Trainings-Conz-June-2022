@@ -3,21 +3,24 @@
         <div class="card border-0">
             <div class="card-body">
                 <h2>Add Customer</h2>
-                <div>
-                    <label class="form-label">Customer Code</label>
-                    <input [(ngModel)]="CustomerModel.customerCode" class="form-control" type="text" />
-                </div>
-                <div>
-                    <label class="form-label">Customer Name</label>
-                    <input [(ngModel)]="CustomerModel.customerName" class="form-control" type="text" />
-                </div>
-                <div>
-                    <label class="form-label">Customer Amount</label>
-                    <input [(ngModel)]="CustomerModel.customerAmount" class="form-control" type="text" />
-                </div>
-                <div class="py-4">
-                    <input type="submit" class="btn btn-primary" value="Add Customer" (click)="AddCustomer()" />
-                </div>
+                <form [formGroup]="CustomerModel.formCustomerGroup">
+                    <div>
+                        <label class="form-label">Customer Code</label>
+                        <input [(ngModel)]="CustomerModel.customerCode" formControlName="CustomerCodeControl" class="form-control" type="text" />
+                        <p style="color:red" *ngIf="!CustomerModel.formCustomerGroup.dirty">Customer code is required</p>
+                    </div>
+                    <div>
+                        <label class="form-label">Customer Name</label>
+                        <input [(ngModel)]="CustomerModel.customerName" [ngModelOptions]="{standalone: true}" class="form-control" type="text" />
+                    </div>
+                    <div>
+                        <label class="form-label">Customer Amount</label>
+                        <input [(ngModel)]="CustomerModel.customerAmount" [ngModelOptions]="{standalone: true}" class="form-control" type="text" />
+                    </div>
+                    <div class="py-4">
+                        <input type="submit" [disabled]="!(CustomerModel.formCustomerGroup.valid)" class="btn btn-primary" value="Add Customer" (click)="AddCustomer()" />
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -37,8 +40,9 @@
         <td>{{cust.customerName}}</td>
         <td>{{cust.customerAmount}}</td>
         <td>
-            <button type="button" (click)="EditCustomer(cust)" class="btn btn-outline-primary" style="margin:10px">Edit</button>
-            <button type="button" (click)="DeleteCustomer(cust)" class="btn btn-outline-primary" >Delete</button>
+            <button type="button" (click)="EditCustomer(cust)" class="btn btn-outline-primary"
+                style="margin:10px">Edit</button>
+            <button type="button" (click)="DeleteCustomer(cust)" class="btn btn-outline-primary">Delete</button>
         </td>
     </tr>
 </table>

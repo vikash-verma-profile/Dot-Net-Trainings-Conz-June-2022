@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { RouterModule } from '@angular/router';
@@ -17,7 +17,8 @@ import { TokenInterceptorService } from '../services/token-interceptor.service';
         CommonModule,
         FormsModule,
         RouterModule.forChild(Customerroutes),
-        HttpClientModule
+        HttpClientModule,
+        ReactiveFormsModule
     ],
     providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi: true }],
     bootstrap: [CustomerComponent]
