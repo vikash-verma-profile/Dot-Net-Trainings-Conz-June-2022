@@ -7,13 +7,13 @@
                     <div>
                         <label class="form-label">Customer Code</label>
                         <input [(ngModel)]="CustomerModel.customerCode" formControlName="CustomerCodeControl" class="form-control" type="text" />
-                        <p style="color:red" *ngIf="!CustomerModel.formCustomerGroup.dirty" [hidden]="!hasError('required','CustomerCodeControl')">Customer code is required</p>
-                        <p style="color:red" *ngIf="!CustomerModel.formCustomerGroup.dirty" [hidden]="!hasError('required','CustomerCodeControl')">Customer code should be proper</p>
+                        <p style="color:red" [hidden]="!(hasError('required','CustomerCodeControl'))">Customer code is required</p>
+                        <p style="color:red"  [hidden]="!(hasError('pattern','CustomerCodeControl'))">Customer code should be proper</p>
                     </div>
                     <div>
                         <label class="form-label">Customer Name</label>
                         <input [(ngModel)]="CustomerModel.customerName" formControlName="CustomerNameControl" class="form-control" type="text" />
-                        <p style="color:red" *ngIf="!CustomerModel.formCustomerGroup.dirty" [hidden]="!hasError('required','CustomerNameControl')">Customer Name is required</p>
+                        <p style="color:red"  [hidden]="!(hasError('required','CustomerNameControl'))">Customer Name is required</p>
                     </div>
                     <div>
                         <label class="form-label">Customer Amount</label>
@@ -27,6 +27,7 @@
         </div>
     </div>
 </div>
+
 
 <table class="table caption-top">
     <caption>List of Customers</caption>
