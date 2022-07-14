@@ -32,3 +32,4 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\api1\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\api1\obj\Debug\netcoreapp3.1\api1.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\api1\obj\Debug\netcoreapp3.1\api1.csproj.CopyComplete
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\api1\obj\Debug\netcoreapp3.1\api1.csproj.AssemblyReference.cache

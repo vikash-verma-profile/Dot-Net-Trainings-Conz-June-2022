@@ -32,9 +32,10 @@ namespace api1
             services.AddAuthentication("Bearer").AddJwtBearer("Bearer", x =>
             {
                 x.Authority = "http://localhost:5000/";
+                x.RequireHttpsMetadata = false;
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateAudience = false
+                    ValidateAudience = false  
                 };
             });
         }
