@@ -20,7 +20,6 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\obj\Debug\netcoreapp3.1\IS4SERVER.csproj.AssemblyReference.cache
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\obj\Debug\netcoreapp3.1\IS4SERVER.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\obj\Debug\netcoreapp3.1\IS4SERVER.AssemblyInfoInputs.cache
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\obj\Debug\netcoreapp3.1\IS4SERVER.AssemblyInfo.cs
