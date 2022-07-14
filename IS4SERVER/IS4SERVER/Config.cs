@@ -38,6 +38,8 @@ namespace IS4SERVER
                         new Secret("secret".Sha256())
                     },
                     AllowedScopes={"api1"},
+                    AccessTokenLifetime = 3600,
+                    IdentityTokenLifetime=3600
                 },
             };
         }

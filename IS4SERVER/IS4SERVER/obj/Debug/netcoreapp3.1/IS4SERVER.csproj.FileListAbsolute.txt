@@ -33,3 +33,4 @@ C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\obj\Debug\netcoreapp3.1\IS4SERVER.dll
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\obj\Debug\netcoreapp3.1\IS4SERVER.pdb
 C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\obj\Debug\netcoreapp3.1\IS4SERVER.genruntimeconfig.cache
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\IS4SERVER\IS4SERVER\obj\Debug\netcoreapp3.1\IS4SERVER.csproj.AssemblyReference.cache

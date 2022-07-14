@@ -23,7 +23,8 @@ namespace IS4SERVER
             // uncomment, if you want to add an MVC-based UI
             //services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
 
-            var builder = services.AddIdentityServer()
+            var builder = services.AddIdentityServer(
+                x=>x.Authentication.CookieLifetime=TimeSpan.FromSeconds(20))
                 .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApis())
                 .AddInMemoryClients(Config.GetClients());
