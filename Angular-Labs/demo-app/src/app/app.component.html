@@ -1,0 +1,16 @@
+<div class="container">
+  <table class="table caption-top">
+    <caption>List of Customers</caption>
+    <thead class="table-light">
+
+      <td>Id</td>
+      <td>Text</td>
+      <td>Created On</td>
+    </thead>
+    <tr *ngFor="let cust of CustomerModels">
+      <td>{{cust.id}}</td>
+      <td>{{cust.text}}</td>
+      <td>{{cust.createdOn}}</td>
+    </tr>
+  </table>
+</div>
