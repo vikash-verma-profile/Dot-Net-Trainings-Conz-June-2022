@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
@@ -34,6 +35,13 @@ namespace WebApplication2.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [HttpGet]
+        [Route("sample")]
+        public IEnumerable<Sample> GetSampleData()
+        {
+            sampledbContext db = new sampledbContext();
+            return db.Samples;
         }
     }
 }
