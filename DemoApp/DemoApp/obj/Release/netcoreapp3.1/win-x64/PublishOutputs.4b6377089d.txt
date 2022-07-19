@@ -1,0 +1,7 @@
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\DemoApp\DemoApp\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\DemoApp.exe
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\DemoApp\DemoApp\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\DemoApp\DemoApp\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\appsettings.json
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\DemoApp\DemoApp\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\DemoApp.dll
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\DemoApp\DemoApp\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\DemoApp.deps.json
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\DemoApp\DemoApp\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\DemoApp.runtimeconfig.json
+C:\Users\LEVEL UP SOLUTIONS 1\Desktop\Dot-Net-Trainings-Conz-June-2022\DemoApp\DemoApp\obj\Release\netcoreapp3.1\win-x64\PubTmp\Out\DemoApp.pdb

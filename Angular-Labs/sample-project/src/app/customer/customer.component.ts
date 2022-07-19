@@ -56,7 +56,7 @@ export class CustomerComponent {
     let httparms = new HttpParams().set("Id", cust.id);
     let options = { params: httparms };
     // this.CustomerModels=this.arrayRemove( this.CustomerModels,Customer)
-    this.http.delete("https://localhost:44318/api/Customer/delete", options).subscribe(res => { this.GetCustomerData(); console.log(res) }, res => console.log(res));
+    this.http.delete("https://localhost:44318/api/Customer/delete", options).subscribe(res => { this.GetCustomerData(); console.log(res) }, res => { this.GetCustomerData(); console.log(res); });
 
   }
 
@@ -66,7 +66,7 @@ export class CustomerComponent {
     });
   }
 
-  hasError(typeofvalidator:string,controlname:string):Boolean{
+  hasError(typeofvalidator: string, controlname: string): Boolean {
     return this.CustomerModel.formCustomerGroup.controls[controlname].hasError(typeofvalidator);
   }
 }
